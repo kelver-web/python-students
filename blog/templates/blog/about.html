@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block content1 %}
+<article class="about-section py-5">
+    <div class="container">
+	    <h2 class="title mb-3">Sobre Mim</h2>
+
+	    <p>Olá futuro programador Python sou Kelver tudo bem com você? espero que sim &#128526;. Bem, aos 39 do segundo tempo Decidi entrar na faculdade para realizar meu sonho de trabalhar com tecnologia e optei pelo curso de análise e desenvolvimento de sistemas. Sou desenvolvedor web com Python e Django e outras tecnologias.  </p>
+	    <figure><img class="img-fluid" src="{% static 'img/about2.png' %}" alt="image"></figure>
+        <br>
+	    <h5 class="mt-5">Sobre o Blog</h5>
+	    <p>Vou tentar explicar um pouco sobre o objetivo desse blog. O blog nasce com o intuito de levar conhecimento aos iniciantes sobre a linguagem de programação Python, aos que estão interessados em saber o verdadeiro poder que o Python tem e com esse poder em mãos como você poderá mudar o seu futuro. Com a simplicidade da linguagem é possível fazer coisas poderosas com poucas linhas de código.</p>
+        <p>Aqui você estudará:</p>
+        <ul>
+            <li>Desenvolvimento Web? <b>Python e Django</b></li>
+            <li>Automatizar tarefas repetitivas do seu dia a dia? <b>Python</b></li>
+        </ul>
+        <p>No Blog você vai encontrar artigos completos que vão te explicar sobre diversas ferramentas do Python, IDE's e tudo mais.</p>
+	    <h5 class="mt-5">Minhas Experiências</h5>
+	    <p>Depois de tanto estudar, decidi que estava na hora de novos desafios. Comecei então a divulgar meus serviços entre meus amigos e oferecer soluções gratuitas para alguns para ganhar experiência. Eu sei, muita gente vai dizer que é errado trabalhar de graça e que num sei mais lá o quê, mas a realidade era que eu precisava de experiência, e oferecer trabalho em troca dessa experiência foi o que me proporcionou estar aqui hoje.
+        A minha própria pressão de ter projetos para desenvolver foi a minha maior amiga, problemas que não havia enfrentado, bugs bizarros, erros que nunca tinha visto, regras de negócios desconhecidas e suas implementações. Tudo isso me deu uma bagagem legal para conseguir desenvolver projetos legais como esse blog.</p>
+
+	    <figure><a><img class="img-fluid" src="{% static 'img/about.jpg' %}" alt="image"></a></figure>
+    </div>
+</article><!--//about-section-->
+
+<section class="cta-section theme-bg-light py-5">
+    <div class="container text-center">
+	    <h2 class="heading">Newsletter</h2>
+	    <div class="intro">Inscreva-se com seu melhor email, receba posts do blog em sua caixa de entrada.</div>
+	    <form class="signup-form form-inline justify-content-center pt-3">
+            <div class="form-group">
+                <label class="sr-only" for="semail">Your email</label>
+                <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </div><!--//container-->
+</section>
+
+{% endblock %}

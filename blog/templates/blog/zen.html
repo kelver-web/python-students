@@ -1,0 +1,76 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block content1 %}
+<article class="about-section py-5">
+    <div class="container">
+        <img src="http://cdn.shopify.com/s/files/1/1668/0637/products/NL_sticker_zen_of_python_mockup_1200x1200.png?v=1571439592" alt="" style="width:100%">
+	    <br><br>
+        <p>O Zen of Python é uma coleção de 19 aforismos para escrever programas de computadores que influenciam o design de programas em Python (e outras linguagens também). Vou tentar explicar cada um deles:</p>
+	    <br>
+	    <p>
+            <ul>
+                <li>O bonito é melhor do que o feio.</li>
+                <ol>Claro que beleza é subjetivo, mas talvez a principal razão da popularidade do Python seja a facilidade de usá-lo e entendê-lo, então a beleza do código está na essência dessa linguagem. Aqui beleza é sinônimo de fácil entendimento.</ol><br>
+                <li>O explícito é melhor do que o implícito.</li>
+                <ol>O melhor para qualquer código é ele ser extremamente claro no que ele se propõe a fazer, por mais que isso exija verborragia. Sem truques, ou gatilhos escondidos, tudo tem que estar as mãos e facilmente acessível.</ol><br>
+                <li>O simples é melhor do que o complexo.
+                O complexo é melhor do que o complicado.</li>
+                <ol>Tudo por ser feito usando técnicas simples e/ou complexas. Problemas simples podem usar soluções simples, e problemas complexos quase sempre vão exigir soluções complexas. Sempre prefira a simplicidade, ao invés da complexidade, mas as vezes usar soluções simples em problemas complexos pode torná-los complicados, então entenda até onde pode ir os limites dessa simplicidade.</ol><br>
+                <li>O plano é melhor que o aninhado.</li>
+                <ol>Organização é importante, e categorizar o que você tem é importante, desde que a organização não se torne pura burocracia. Não tem problema ter um código só em uma página ao invés de separá-lo em diversos arquivos, se isso for algo pragmático e organizado, e não gerar burocracia desnecessária (e nem uma complexidade e complicação desnecessária)</ol><br>
+                <li>O esparso é melhor do que o denso.</li>
+                <ol>A maioria dos programadores que conheci sempre fizeram questão de colocar a maior quantidade possível de função na menor quantidade possível de código. Isso vira uma loucura, muita densidade de função por código, torna algo extremamente complicado de entender. Fica mais palatável se separar e quebrá-lo em várias linhas.</ol><br>
+                <li>A legibilidade conta.</li>
+                <ol>Sem desculpas de falta de memória, não reduza nome de variáveis. Dê nomes fáceis de entender e completo para as variáveis e funções. Isso torna o código mais agradável e entendível, como se foge uma linguagem de comunicação, afinal alguém de fato vai ler isso daí em algum momento.</ol><br>
+                <li>Casos especiais não são especiais o suficiente para quebrar regras.
+                    Embora praticidade supere a pureza.</li>
+                <ol>A programação está cheia de “melhores práticas” que os programadores devem buscar em seu código. Contornar essas práticas para um hack rápido pode ser tentador, mas pode levar a um ninho de ratos com códigos inconsistentes e ilegíveis. No entanto, inclinar-se para trás para aderir às regras pode resultar em código ilegível e altamente abstrato. A tentativa da linguagem de programação Java de ajustar todo o código ao seu paradigma orientado a objetos geralmente resulta em muito código padrão, mesmo para o menor programa. Andar na linha entre esses dois aforismos se torna mais fácil com a experiência. E com o tempo, você não apenas aprenderá as regras, mas também aprenderá quando quebrá-las.</ol><br>
+                <li>Erros nunca devem passar de forma silenciosa.
+                A menos que sejam explicitamente silenciados.</li>
+                <ol>Ok, os programadores quase sempre ignoram as mensagens de erros, mas isso não é razão para pararmos de emiti-las. Funções devem ser ter exceções, quando aplicáveis, é preferível que um programa trave rapidamente quando encontrar um erro, ao invés de ignorá-lo e escondê-lo até que ele se torne cada vez pior (e mais difícil de depurar com o passar do tempo). Bom, pelo menos se você estiver silenciando esses erros, tenha certeza de que você esta fazendo isso conscientemente, e com os riscos altamente gerenciados.</ol><br>
+                <li>Em face da ambiguidade, recuse a tentação de adivinhar.</li>
+                <ol>Os computadores às vezes nos tornam supersticiosos, como se tudo fosse uma questão de sorte, bastasse desligar e ligar o sistema para voltar a funcionar. Para resolver problemas é necessário depurá-lo e achar a causa raiz e nunca mascará-lo.</ol><br>
+                <li>Deve haver apenas um — e preferencialmente só um — caminho óbvio de fazer isso.</li>
+                <ol>Isso é uma cutucada ao lema da linguagem concorrente Perl: “Há mais de uma maneira de fazer isso!”. A ideia é que se tiver mais de uma maneira de fazer a mesma coisa pode ser uma faca de dois gumes: ter três ou quatro formas de escrever, significa também o esforço de ter que aprender a ler três ou quatro formas diferentes de fazer a mesma coisa. Fica mais complexo sem realmente ser mais eficiente.</ol><br>
+                <li>Embora esse caminho possa não ser óbvio a princípio, a menos que você seja holandês.</li>
+                <ol>Guido van Rossum, o criador do Python era holandês.</ol>
+                <li>O agora é melhor do que o nunca.
+                Embora o nunca é sempre melhor do que o exatamente agora.</li>
+                <ol>Claro que um código que possa ser terminado de forma tempestiva é melhor de um que fica levando voltas e voltas e nunca fica pronto. Entretanto, todas essas situações são bem melhores do que um que precise ficar pronto imediatamente e cheio de problemas que sejam incorrigíveis e tragam maiores dores de cabeça. Desenvolvimento de</ol><br>
+                <li>Se a implementação é difícil de explicar, isso é uma má ideia.
+                Se a implementação é fácil de explicar, isso pode ser uma boa ideia.</li>
+                <ol>Por mais que a implementação permita uma computação de altíssimo desempenho, se ela for impossível para outros programadores entenderem e depurarem o código, com certeza ela vai ser uma péssima ideia a curto, médio e principalmente a longo prazo. Não que um código que seja fácil de ser explicado garanta sua qualidade, mas já é um excelente começo, e um bom princípio para que ele seja fácil e incrementalmente possível de melhoria a médio e longo prazo. O suporte ao código é fundamental na programação.</ol><br>
+                <li>Os namespaces são ótimas ideias, vamos fazer mais!</li>
+                <ol>Namespaces são fundamentais para impedir conflitos entre módulos locais e globais. Use e abuse deles para evitar problemas de contextos. Mas isso é só para evitar problemas de nome de funções e variáveis, cuidado com a burocracia e com todos os 18 princípios acima, isso pode deixar o código mais complexo se usado incorretamente.</ol><br>
+                <img src="https://miro.medium.com/max/700/0*eVYBGFGqyAzH8Osf" alt="" style="width: 100%;">
+                <p><ol>O famoso grupo de comédia Monty Python inspirou o nome da linguagem de programação</ol></p>
+            </ul>
+        </p>
+        <ul>
+            
+        </ul>
+        
+
+	   
+    </div>
+</article><!--//about-section-->
+
+<section class="cta-section theme-bg-light py-5">
+    <div class="container text-center">
+	    <h2 class="heading">Newsletter</h2>
+	    <div class="intro">Inscreva-se com seu melhor email, receba posts do blog em sua caixa de entrada.</div>
+	    <form class="signup-form form-inline justify-content-center pt-3">
+            <div class="form-group">
+                <label class="sr-only" for="semail">Your email</label>
+                <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </div><!--//container-->
+</section>
+
+
+
+{% endblock %}

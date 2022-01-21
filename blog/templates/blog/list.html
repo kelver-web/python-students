@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block content1 %}
+<div class="container text-center">
+    <h2 class="heading">Python Students - Um modelo de blog feito para desenvolvedores que estão iniciando sua jornada Python.</h2>
+    <div class="intro">Bem-vindo ao meu blog. Inscreva-se para receber meu último post do blog em sua caixa de entrada.</div>
+    <form class="signup-form form-inline justify-content-center pt-3" method="post" action="{% url 'blog:send-email'%}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label class="sr-only" for="semail">Your email</label>
+            <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+        <br>
+        {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+   
+</div><!--//container-->
+
+{% endblock %}
+
+{% block content2 %}
+<div class="container">
+    <div class="item mb-5">
+        <div class="media">
+            <!--<img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{% static 'img/python.png' %}" alt="image">-->
+            <div class="media-body">
+                {% for post in posts %}
+                <h3 class="title mb-1"><a href="{{ post.get_absolute_url }}" style="text-decoration: none;"> {{ post.title|safe }}</a></h3>
+                <div class="meta mb-1"><span class="date">Publicado em {{ post.publish }} por Python Student</span><span class="comment"><a href="#">8 comments</a></span></div>
+                <div class="intro">{{ post.description|truncatewords:30|linebreaks }}</div>
+                <a class="more-link" href="{{ post.get_absolute_url }}">Read more &rarr;</a>
+                <br><br>
+                {% endfor %}
+            </div><!--//media-body-->
+        </div><!--//media-->
+    </div><!--//item-->
+    {% include "blog/pagination.html" with page=oage_obj %}
+</div>
+{% endblock %}
